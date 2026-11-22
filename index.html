@@ -2,15 +2,100 @@
 <html lang="en"
 <head>
     <meta charset="UTF-8"
-    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STAY REAL</title>
     <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --bg-outer: #050505;
+            --bg-terminal: #111315;
+            --text-primary: #00ff66;
+            --text-muted: #6c7a89;
+            --border-color: #2c3136;
+            --font-mono: 'Courier New', Consolas, monospace;
+        }
+
+        body {
+            background-color: var(--bg-outer);
+            color: var(--text-primary);
+            font-family: var(--font-mono);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100dvh;
+        }
+
+        .terminal-container {
+            width: 100%;
+            max-width: 420px;
+            height: 100dvh;
+            max-height: 800px;
+            background-color: var(--bg-terminal);
+            border: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .terminal-header {
+            padding: 16px;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
+        .terminal-main {
+            flex: 1;
+            padding: 16px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .btn {
+            flex: 1;
+            padding: 12px;
+            background-color: transparent;
+            color: var(--text-primary);
+            border: 1px solid var(--font-mono);
+            font-family: var(--font-mono);
+            font-size: 0.9rem;
+            cursor: pointer;
+        }
 
     </style>
 </head>
 <body>
 
-    <h1></h1>
+    <div class="terminal-container">
+        <header class="terminal-header">
+            <span class="title">STAY REAL</span>
+            <span id="status-indicator" class="status">● READY</span>
+        </header>
+
+        <main id="app-view" class="terminal-main">
+            <p class="system-msg">&gt; SYSTEM INITIALIZED.</p>
+            <p class="system-msg">&gt; AWAITING INPUT...</p>
+        </main>
+
+        <footer class="terminal-footer">
+            <button id="btn-logs" class="btn">VIEW LOGS</button>
+            <button id="bun-new" class="btn">+ NEW ENTRY</button>
+        </footer>
+    </div>
+
+    <h1>STAY REAL</h1>
+
     <script>
+        
 
     </script>
 </body>
